@@ -1,8 +1,15 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    myHash = {}
+    result = []
+
+    for number in a:
+        myHash[number] = True
+
+    for key in myHash:
+        if key > 0:
+            if -(key) in myHash:
+                if key not in result:
+                    result.append(key)
 
     return result
 
